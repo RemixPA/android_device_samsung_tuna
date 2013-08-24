@@ -34,11 +34,21 @@ TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a9
+ARCH_ARM_HAVE_TLS_REGISTER := true
+TARGET_GCC_VERSION := 4.7
+#TARGET_USE_O3 := true
+#TARGET_USE_LINARO_STRING_ROUTINES := true
 
 TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_BASE := 0x80000000
 # BOARD_KERNEL_CMDLINE :=
+
+# Define kernel config for inline building
+TARGET_KERNEL_CONFIG := pa_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/tuna
+
+TARGET_PREBUILT_KERNEL := device/samsung/tuna/kernel
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := omap4
@@ -53,6 +63,9 @@ USE_OPENGL_RENDERER := true
 
 # set if the target supports FBIO_WAITFORVSYNC
 TARGET_HAS_WAITFORVSYNC := true
+
+# use the new recovery.fstab format
+RECOVERY_FSTAB_VERSION=2
 
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_tuna
