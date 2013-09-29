@@ -17,4 +17,11 @@
 <resources>
     <!-- Show dock settings when docked -->
     <bool name="has_dock_settings">true</bool>
+    
+    <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
+         Setting to false will disable Volume Rocker Wake support -->
+    <bool name="config_show_volumeRockerWake">true</bool>
+
+    <!-- Volume rocker support. Some devices do not have a volume rocker. -->
+    <bool name="has_volume_rocker">true</bool>
 </resources>
