@@ -98,9 +98,18 @@ WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+# Boot animation
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+TARGET_BOOTANIMATION_USE_RGB565 := true
+
 BOARD_LIB_DUMPSTATE := libdumpstate.tuna
 
 BOARD_USES_SECURE_SERVICES := true
+
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/tuna/recovery_keys.c
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 
 BOARD_SEPOLICY_DIRS := \
         device/samsung/tuna/sepolicy
